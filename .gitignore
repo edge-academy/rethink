@@ -1,0 +1,11 @@
+bower_components
+.DS_Store
+.idea
+.sass-cache
+node_modules
+.tmp
+dist
+phonegap
+app/res/ios
+TestFlightSDK3.0.2
+sound.originals
