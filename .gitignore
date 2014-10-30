@@ -1,11 +1,18 @@
-bower_components
-.DS_Store
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
 .idea
-.sass-cache
-node_modules
-.tmp
-dist
-phonegap
-app/res/ios
-TestFlightSDK3.0.2
-sound.originals
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
