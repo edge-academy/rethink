@@ -1,44 +1,45 @@
 <div class="container-fluid">
-    <header class="row">
-        <div class="col-md-6 col-xs-12 logoContainer">
-            <div class="logo">Ideas | UChicago</div>
-          {{#if session.token}}
-            {{#link-to
-            'account'
-            session.user
-            tagName="i"
-            class="glyphicon glyphicon-settings col-xs-1 col-md-hidden"}}{{/link-to}}
-          {{/if}}
+    <div class="row siteHeader">
+        <div class="container-fluid">
+            <header class="row mainHeader">
+                <div class="col-md-6 col-xs-12 logoWrapper">
+                    <div class="logo">Ideas | UChicago</div>
+                  {{#if session.token}}
+                    {{#link-to
+                    'account'
+                    session.user
+                    tagName="i"
+                    class="glyphicon glyphicon-settings col-xs-1 col-md-hidden"}}{{/link-to}}
+                  {{/if}}
+                </div>
+                <div class="col-md-6 col-xs-hidden accountInfo">
+                  {{#if session.token}}
+                      <a {{action "logout"}}>Logout</a>
+                    {{#link-to
+                    'account'
+                    session.user
+                    tagName="div"
+                    class="glyphicon glyphicon-settings"}}{{/link-to}}
+                  {{/if}}
+                </div>
+            </header>
+            <nav class="row mainNav">
+                <ul>
+                    <li><a>Featured</a></li>
+                    <li><a>Trending</a></li>
+                    <li><a class="active">New</a></li>
+                  {{#if session.token}}
+                      <li><a>Your Ideas</a></li>
+                  {{/if}}
+                    <li><a>Guidelines</a></li>
+                    <li><a class="btn-submit">Submit!</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="col-md-6 col-xs-hidden accountInfo">
-          {{#if session.token}}
-              <a {{action "logout"}}>Logout</a>
-            {{#link-to
-            'account'
-            session.user
-            tagName="div"
-            class="glyphicon glyphicon-settings"}}{{/link-to}}
-          {{/if}}
-        </div>
-    </header>
-    <nav class="row">
-        <ul>
-            <li>Featured</li>
-            <li>Trending</li>
-            <li>New</li>
-          {{#if session.token}}
-              <li>Your Ideas</li>
-          {{/if}}
-            <li>Guidelines</li>
-            <li>Submit!</li>
-        </ul>
-    </nav>
+    </div>
     <div class="row ideaSearch">
         <input type="text" placeholder="search" autofocus="true">
     </div>
   {{outlet}}
-    <footer class="row">
-        <p>Brought to you by Edge 101 (':</p>
-    </footer>
 </div>
 
