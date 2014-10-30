@@ -1,7 +1,21 @@
-<ul>
-  {{#each idea in model}}
-      <li class="idea">
-          <h3>{{idea.title}}</h3>
-      </li>
-  {{/each}}
-</ul>
+<div class="container-fluid">
+    <div class="row">
+        <ul class="col-md-8">
+          {{#each idea in model}}
+              <li class="idea">
+                  <h3>{{idea.title}}</h3>
+              </li>
+          {{/each}}
+        </ul>
+        <div class="col-md-4">
+            <div class="ideaSuccessStory">
+                <header class="bg-green">
+                   <h3>We Made It!</h3>
+                </header>
+                <p>Something about the awesome idea</p>
+                <p><a>read more</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
