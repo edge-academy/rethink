@@ -1,0 +1,7 @@
+{{highestRankedIdea.title}}
+
+<ul>
+  {{#each idea in model}}
+    <li {{bind-attr class="idea.state :idea"}} {{action "myClickAction" idea}}>{{idea.title}}</li>
+  {{/each}}
+</ul>

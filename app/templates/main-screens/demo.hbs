@@ -1,0 +1,19 @@
+<h2>Hi, I'm the demo template!</h2>
+<p>Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod.</p>
+<style>
+    .deleting {
+        background-color: #ffff000;
+    }
+    .success {
+        background-color : #0f0;
+    }
+    .failure {
+      background-color : #f00;
+    }
+</style>
+<ul>
+  {{#each idea in model}}
+    <li {{bind-attr class="idea.state"}}{{action "deleteMe" idea}}>{{idea.title}}</li>
+  {{/each}}
+</ul>
+

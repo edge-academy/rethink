@@ -2,12 +2,16 @@ import DS from "ember-data";
 
 var attr = DS.attr,
     belongsTo = DS.belongsTo,
+
     Idea = DS.Model.extend({
       title : attr(),
       description : attr(),
-      category : belongsTo('category'),
+      state : attr(),
+      //category : belongsTo('category'),
       media : attr(),
-      author : belongsTo('user')
+      //author : belongsTo('user'),
+      //ranking : attr('number'),
+      //myProperty : 'some string'
     });
 
 Idea.reopenClass({ FIXTURES : [
@@ -20,7 +24,8 @@ Idea.reopenClass({ FIXTURES : [
       type : 'image',
       src  : 'fixtures/photos/photo1.png'
     },
-    author : 1
+    author : 1,
+    ranking : 5
   }
 ]});
 
