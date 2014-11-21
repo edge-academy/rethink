@@ -1,0 +1,7 @@
+@require 'colors.styl'
+
+colors = 'maroon' UC_Maroon, 'darkGray' UC_DarkGray, 'lightGray' UC_LightGray, 'yellow' UC_Yellow, 'yellowLight' UC_Yellow_light, 'yellowDark' UC_Yellow_dark, 'orange' UC_Orange, 'orangeLight' UC_Orange_light, 'orangeDark' UC_Orange_dark, 'red' UC_Red, 'redLight' UC_Red_light, 'redDark' UC_Red_dark, 'lightGreen' UC_LightGreen, 'lightGreenLight' UC_LightGreen_light, 'lightGreenDark' UC_LightGreenDark, 'darkGreen' UC_DarkGreen, 'darkGreenLight' UC_DarkGreen_light, 'darkGreenDark' UC_DarkGreen_dark, 'blue' UC_Blue, 'violet' UC_Violet;
+
+for pair in colors
+  .square .{'' + pair[0]}
+    background-color pair[1]

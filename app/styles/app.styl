@@ -1,3 +1,5 @@
+@require "components/colors.styl"
+
 html
   font-size 125%
   font-family "Helvetica Neue", "open sans", Helvetica, Arial, sans-serif
@@ -15,39 +17,96 @@ header
   
 a
   text-decoration none
-   
+  font-family Open Sans
+
+.mainHeader
+  height 60px
+  position relative
+  background-color #660000
+  background-image -webkit-gradient(linear, left 50%, left 100%, from(UC_Maroon), to(#660000))
+  background-image -webkit-linear-gradient(top, UC_Maroon, 50%, #660000, 100%)
+  background-image -moz-linear-gradient(top, UC_Maroon 50%, #660000 100%)
+  background-image linear-gradient(to bottom, UC_Maroon 50%, #660000 100%)
+  background-repeat repeat-x
+  // filter progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff810b13', endColorstr='#ff52070c', GradientType=0)
+  
 .logo
-  margin-top 15px
+  text-align center
+  display inline
+  float left
+  position absolute
+  top 50%
+  transform translate(0,-50%)
 
 .logo a
   color white
-  
-  
+  text-decoration none
+  font-size 120%
+   
 .logo a:hover
   text-decoration none
   
+.logo img
+  height 30px
+  margin 0 2px 2px 2px
+  
+.navbar 
+  float right
+  display inline
+  text-align center
+  margin 15px 0 0 0
+  @media (max-width: 680px)
+    display none 
+
 .navbar a
   color white
   text-decoration none
+  font-size 80%
   
+.navbar ul
+  list-style-type none
+
 .navbar li
   float right
   color white
-  text-decoration none
-  margin 15px 5px 0 5px
+  list-style-type none
+  margin 0 0 0 15px
   
 .navbar a:hover
-  color #A6A6A6
+  color #CCCCCC
   text-decoration none
 
-.center-block  
+.center-block 
   text-align center
-  margin 15px 0 0 0
+  margin 15px 0
 
 .center-block input
+  margin 0 auto 
   text-align center
+  border-radius 4px
+  border-outline 2px
+  width 20%
+  
+img
+  max-width 100%
+  height auto
+  
+.table td
+  height 100px
+  border-top none
+  
+.table td.no-top
+.table tr.no-top
+  border-top none
   
 
+.table-striped>tbody>tr:nth-child(odd)>td 
+.table-striped>tbody>tr:nth-child(odd)>th 
+  background-color white
+  
+.table-striped>tbody>tr:nth-child(even)>td 
+.table-striped>tbody>tr:nth-child(even)>th 
+  background-color #f9f9f9
   
 
   
