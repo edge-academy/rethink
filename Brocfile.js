@@ -1,6 +1,6 @@
 /* global require, module */
-
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var pickFiles = require('broccoli-static-compiler');
 
 var app = new EmberApp();
 
@@ -18,8 +18,11 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
-app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff', {
-  destDir: 'assets/fonts'
+
+//import fonts
+var bootstrapFonts = pickFiles('bower_components/bootstrap/dist/fonts', {
+  srcDir: '/',
+  destDir: '/fonts'
 });
 
-module.exports = app.toTree();
+module.exports = app.toTree([bootstrapFonts]);
