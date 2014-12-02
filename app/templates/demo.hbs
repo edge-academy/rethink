@@ -1,0 +1,9 @@
+<h2>Hi, I'm the demo template!</h2>
+<p> skjdfksjlkdjflskjfksd </p>
+{{#each idea in model}}
+<ul> 
+{{#each idea in model}}
+	<li {{action "deleteMe" idea}}>{{idea.title}}</li> 
+
+{{/each}}
+</ul> 
